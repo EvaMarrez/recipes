@@ -20,7 +20,7 @@ export const prerender = true
 
 				return (
 				<article class="break-inside-avoid overflow-hidden rounded-lg shadow-md shadow-amber-950/30 dark:shadow-black/10 hover:shadow-lg transition-shadow duration-300">
-					<a href={`/recipe/${slug}`} class="block relative group">
+					<a href={`/recipe/${slug}`} class="block relative group opacity-85 hover:opacity-100 transition-opacity duration-300">
 						<div class={`w-full ${randomHeight} overflow-hidden`}>
 							<img
 							transition:name={`img-${slug}`}
@@ -29,9 +29,9 @@ export const prerender = true
 							class="w-full h-full object-cover transition-transform group-hover:scale-115 duration-300"
 							/>
 						</div>
-						<div class="absolute bottom-0 left-0 right-0 bg-pink-950/70 group-hover:bg-pink-600/80 text-white p-2 text-sm md:text-base transition-colors duration-300">
-							<h2 class="font-semibold">
-							{title}
+						<div class="absolute bottom-0 left-0 right-0 bg-pink-950/70 group-hover:bg-pink-800/80 text-white p-2 text-sm md:text-base transition-colors duration-300">
+							<h2 class="font-semibold font-display">
+								{title}
 							</h2>
 						</div>
 					</a>
