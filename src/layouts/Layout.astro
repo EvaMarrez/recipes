@@ -1,5 +1,6 @@
 ---
- import './src/styles/global.css'  
+import './src/styles/global.css'  
+import ThemeToggle from '../components/ThemeToggle.astro';
 ---
 <!doctype html>
 <html lang="es">
@@ -9,7 +10,12 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<title>Recetas | Eva Marrez</title>
 	</head>
-	<body>
-		<slot />
+	<body class="bg-white text-black dark:bg-gray-900 dark:text-white transition-colors duration-300">
+		<ThemeToggle />
+		<header class="p-4">
+		</header>
+		<main class="p-4">
+			<slot />
+		</main>
 	</body>
 </html>
