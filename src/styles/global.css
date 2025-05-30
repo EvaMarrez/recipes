@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "tailwindcss-animated";
+@plugin "@tailwindcss/typography";
 
   /* Create a custom Tailwind variant for dark mode.
    * It applies styles when .dark is present on the element.
