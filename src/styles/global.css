@@ -1,7 +1,12 @@
 @import "tailwindcss";
+@import "tailwindcss-animated";
 
   /* Create a custom Tailwind variant for dark mode.
    * It applies styles when .dark is present on the element.
    * :where(.dark, .dark *) ensures low specificity for better overrides.
   */
 @custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+	--font-display: "Lexend", "sans-serif";
+}

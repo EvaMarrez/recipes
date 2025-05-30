@@ -1,7 +1,43 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const recipes = await getCollection('recipes')
+
+export const prerender = true
 ---
 
-<Layout>
+<Layout title="Recetas | Eva Marrez">
+	<div class="columns-2 lg:columns-4 gap-4 space-y-4">
+		{
+			recipes.map((recipe, index) => {
+				const { slug, data } = recipe;
+				const { title, img } = data;
 
+				// Altura variable en base al índice para simular masonry
+				const heights = ["h-40", "h-52", "h-64", "h-80"];
+				const randomHeight = heights[index % heights.length];
+
+				return (
+				<article class="break-inside-avoid overflow-hidden rounded-lg shadow hover:shadow-lg transition-shadow duration-300">
+					<a href={`/recipe/${slug}`} class="block relative group">
+					<div class={`w-full ${randomHeight} overflow-hidden`}>
+						<img
+						transition:name={`img-${slug}`}
+						src={`/${img}`}
+						alt={title}
+						class="w-full h-full object-cover transition-transform group-hover:scale-105 duration-300"
+						/>
+					</div>
+					<div class="absolute bottom-0 left-0 right-0 bg-black/60 text-white p-2 text-sm md:text-base">
+						<h2 transition:name={`title-${slug}`} class="font-semibold">
+						{title}
+						</h2>
+					</div>
+					</a>
+				</article>
+				);
+			})
+		}
+	</div>
 </Layout>
