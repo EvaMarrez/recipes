@@ -1,7 +1,7 @@
 ---
 import { getCollection, render } from "astro:content";
-import Layout from "../../layouts/Layout.astro"; 
-import GoBackBtn from "../../components/GoBackBtn.astro";
+import Layout from "@/layouts/Layout.astro"; 
+import GoBackBtn from "@/components/GoBackBtn.astro";
 
 export async function getStaticPaths() {
   const recipes = await getCollection("recipes");

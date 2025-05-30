@@ -1,5 +1,5 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from '@/layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 
 const recipes = await getCollection('recipes')
@@ -24,7 +24,7 @@ export const prerender = true
 						<div class={`w-full ${randomHeight} overflow-hidden`}>
 							<img
 							transition:name={`img-${slug}`}
-							src={`/${img}`}
+							src={`${img}`}
 							alt={title}
 							class="w-full h-full object-cover transition-transform group-hover:scale-115 duration-300"
 							/>
