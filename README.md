@@ -7,7 +7,7 @@ Este proyecto es una pequeña página creada con [Astro](https://astro.build) y 
 ## 🔗 URL del sitio
 
 Puedes visitar la web en producción aquí:  
-➡️ **[https://evamarrez.com/recetas](https://evamarrez.com/recetas)**
+➡️ **[https://recetas.evamarrez.com](https://recetas.evamarrez.com)**
 
 ## 🛠 Tecnologías utilizadas
 
